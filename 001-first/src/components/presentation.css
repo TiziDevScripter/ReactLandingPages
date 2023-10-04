@@ -1,0 +1,29 @@
+.presentation{
+    background-color: var(--color1);
+    display: grid;
+    grid-template-columns: max-content max-content;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8em var(--padding-x);
+    min-height: 80vh;
+    color: var(--color2);
+}
+.presentation h1{
+    font-size: 3em;
+    margin: 0;
+}
+.presentation p{
+    font-size: 1.5em;
+    margin: 0;
+}
+.presentation .img-container{
+    padding: 2em;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #fff;
+    animation: scale .5s ease-in-out forwards;
+}
+.presentation img{
+    display: block;
+    width: 250px;
+}

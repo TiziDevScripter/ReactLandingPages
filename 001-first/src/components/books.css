@@ -1,0 +1,69 @@
+.books{
+    background-color: var(--color2);
+    color: var(--color3);
+    width: 100%;
+    padding: 3em var(--padding-x);
+    /* display: flex;
+    justify-content: center; */
+}
+.books .book-container{
+    display: flex;
+    gap: 2em;
+    margin-top: 1.7em;
+}
+.books .book-container:first{
+    margin-top: 0;
+}
+.books .book-container:nth-child(2){
+    /* background-color: antiquewhite;
+    display: flex; */
+    flex-direction: row-reverse;
+    text-align: right;
+}
+.books .book-container h2{
+    margin: 0;
+    font-size: 2em;
+    position: relative;
+    max-width:fit-content;
+}
+.books .book-container h2.reverse{
+    margin-left: auto;
+}
+.books .book-container h2::before{
+    content: "";
+    background-color: var(--color1);
+    width: calc(100% + 10px);
+    height: 5px;
+    position: absolute;
+    top: 100%;
+}
+.books .book-container h2.reverse::before{
+    left: unset;
+    right: 0;
+}
+.books .book-container h3{
+    font-size: 1.4em;
+    margin: .9em 0;
+}
+.books .book-container p{
+    font-size: 1.2em;
+    text-wrap:balance;
+}
+.books .ancor-image{
+    width: 270px;
+    height: 380px;
+    /* background-color: antiquewhite; */
+}
+.books .image-book{
+    perspective: 1900px;
+    width: 270px;
+    height: 380px;
+    display: block;
+    transition: all .7s;
+}
+.books .ancor-image:hover img{
+    transform: rotateY(20deg) rotateX(10deg);
+}
+.books .ancor-image.reverse:hover img{
+    transform: rotateY(-20deg) rotateX(10deg);
+}
